@@ -12,7 +12,7 @@ const questions = [
     {
         type: "input",
         name: "DescriptionTitle",
-        message: "Description Title"
+        message: "Subtitle"
     },
     {
         type: "input",
@@ -20,9 +20,10 @@ const questions = [
         message: "What is this project about?"
     },
     {
-        type: "input",
+        type: "checkbox",
         name: "TableofContents",
-        message: "Table of Contents"
+        message: "Table of Contents",
+        choices: ["Description", "Usage", "License", "Contributing", "Tests", "Questions"]
     },
     {
         type: "input",
@@ -33,7 +34,7 @@ const questions = [
         type: "list",
         name: "License",
         message: "choose a license",
-        choices: ["MIT", "Apache"]
+        choices: ["MIT", "Apache", "N/A"]
     },
     {
         type: "input",
@@ -64,13 +65,17 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
+async function init() {
+    const answers = await inquirer.prompt(questions)
+    generateMarkdown("README.md", answers)
+}
 
 
 // TODO: Create a function to initialize app
-async function init() {
-    const answers = await inquirer.prompt(questions)
-    generateMarkdown("README.txt", answers)
-}
+// async function init() {
+//     const answers = await inquirer.prompt(questions)
+//     generateMarkdown("README.txt", answers)
+// }
 
 // Function call to initialize app
 init();
