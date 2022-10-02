@@ -32,7 +32,7 @@ default:
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(fileName, data) {
 
-  const content = "# " + data.title +
+  const content = "## " + data.title +
       "\n# " + data.DescriptionTitle +
       "\n\n" + data.Description +
       "\n\n## Table of Contents \n* " + data.TableofContents +
