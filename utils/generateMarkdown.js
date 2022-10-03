@@ -22,8 +22,6 @@ case "MIT":
   return "[![License: MIT](https://opensource.org/licenses/MIT)";
 case "Apache":
   return "[![License](https://opensource.org/licenses/Apache-2.0)";
-case "BSD3":
-  return "[![License](https://opensource.org/licenses/BSD-3-Clause)";
 default:
   return ""
 }
@@ -41,7 +39,7 @@ function generateMarkdown(fileName, data) {
       "\n\n## Contributing \n" + data.Contributing +
       "\n\n## Tests \n" + data.Tests +
       "\n\n## FAQ \n" + data.Questions +
-      "\n\n![webpage for " + data.Title + "]\n(Screenshot.png)"
+      "\n\n![webpage for " + data.title + "]\n(Screenshot.png)" +
   "\n\n Website URL: " + data.Website
 
   fs.writeFile(fileName, content, err => {
