@@ -6,7 +6,7 @@ const generateMarkdown = require("./utils/generateMarkdown")
 const questions = [
     {
         type: "input",
-        name: "Title",
+        name: "title",
         message: "Give it a name!"
     },
     {
@@ -69,13 +69,6 @@ async function init() {
     const answers = await inquirer.prompt(questions)
     generateMarkdown("README.md", answers)
 }
-
-
-// TODO: Create a function to initialize app
-// async function init() {
-//     const answers = await inquirer.prompt(questions)
-//     generateMarkdown("README.txt", answers)
-// }
 
 // Function call to initialize app
 init();

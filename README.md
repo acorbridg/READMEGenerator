@@ -1,13 +1,13 @@
-## undefined
-# create a professional README file using CLI
+## README Generator
+# Use the command line to create a README file!
 
-This project is an app made using Node.js to quickly generate a professional README by answering quetions in the command line
+This project is an app using Node.js to create a README file based on the user's answers to questions.
 
 ## Table of Contents 
-* Description,Usage,License,Contributing,Tests,Questions
+* Description
 
 ## Usage 
-Acceptance Criteria
+type node index.js to begin the application. This will begin a series of prompts to answer, which will be input into a README.md file.
 
 ## License 
 N/A
@@ -16,10 +16,12 @@ N/A
 Isaac Gifford
 
 ## Tests 
-N/A
+n/a
 
 ## FAQ 
-N/A
+n/a
 
 ![webpage for README Generator]
 (Screenshot.png)
+
+ Website URL: github.com/acorbridg/READMEGenerator
